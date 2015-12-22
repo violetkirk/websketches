@@ -1,0 +1,33 @@
+$blue: #01FFAA;
+$shadow-base: 0px 0px 3px RGBA(0,0,0,.5);
+
+.main {
+  margin: 5px;
+  padding: 15px;
+  border: black solid 3px;
+}
+.section1 {
+  background-color:$blue;
+  height: 100px;
+  box-shadow: $shadow-base
+}
+.section2 {
+  background-color:$blue;
+  height: 40%;
+  box-shadow: $shadow-base;
+
+}
+.section3 {
+  background-color:red;
+  height:100px;
+  box-shadow: $shadow-base;
+  .bubble{
+    background: $blue;
+    padding: 10px;
+    display: inline-block;
+    border-radius:50%;
+  }
+}
+h1 {
+  text-align: center;
+}

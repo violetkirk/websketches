@@ -1,0 +1,91 @@
+body {background-color: #d2e7e7;
+}
+div{
+
+}
+
+button{
+  width: 90%;
+  background-color: #9fb2b2;
+  box-shadow: 5px 5px 2px #888888;
+
+}
+.mainimage {
+  height:400px;
+  background-color: black;
+}
+.bio {
+  width: 90%;
+  height: 300px;
+  background-color: #9fb2b2;
+  box-shadow: 5px 5px 2px #888888;
+}
+.txt{
+  margin: 10px;
+}
+.small-9{
+  background-color:white;
+  margin:0;
+}
+.projfooter{
+  height:105px;
+  width:750px;
+  text-align: center;
+}
+.navcircles{
+  background-color: #9ccfcf;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin: 10px;
+  box-shadow:none;
+  padding-bottom: 3px;
+  position: relative;
+  overflow: hidden;
+
+}
+.container{
+  margin-top: 40px;
+}
+.col-nopad{
+  padding: 0;
+}
+.buttonimg{
+  width:300px;
+  max-width: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/*chevrons stolen from codepen.io/jonneal/penkptBs*/
+.chevron::before {
+	border-style: solid;
+	border-width: 0.5em 0.5em 0 0;
+	content: '';
+	display: inline-block;
+	height: 2em;
+	left: 0.2em;
+	position: relative;
+	top: -0.3em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 2em;
+  opacity: 0.75;
+  z-index: 1;
+  align: center;
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}

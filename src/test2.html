@@ -1,0 +1,142 @@
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/foundation.css">
+	<script scr="js/vendor/modernizr.js"> </script>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery/jssor.slider.mini.js"></script>
+		<script>
+				jQuery(document).ready(function ($) {
+
+						var jssor_1_options = {
+							$AutoPlay: true,
+							$BulletNavigatorOptions: {
+								$Class: $JssorBulletNavigator$
+							},
+							$ThumbnailNavigatorOptions: {
+								$Class: $JssorThumbnailNavigator$,
+								$Cols: 3,
+								$Align: 200
+							}
+						};
+
+						var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+						//responsive code begin
+						//you can remove responsive code if you don't want the slider scales while window resizing
+						function ScaleSlider() {
+								var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+								if (refSize) {
+										refSize = Math.min(refSize, 600);
+										jssor_1_slider.$ScaleWidth(refSize);
+								}
+								else {
+										window.setTimeout(ScaleSlider, 30);
+								}
+						}
+						ScaleSlider();
+						$(window).bind("load", ScaleSlider);
+						$(window).bind("resize", ScaleSlider);
+						$(window).bind("orientationchange", ScaleSlider);
+						//responsive code end
+				});
+		</script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="small-9 columns col-nopad">
+
+			<div class="mainimage">
+				<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden;">
+		        <!-- Loading Screen -->
+		        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+		            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+		            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+		        </div>
+		        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
+		            <div data-p="112.50" style="display: none;">
+		                <img data-u="image" src="img/img/celly_project_1.png" />
+		                <div data-u="thumb">
+		                    <img src="img/landscape.jpg" />
+		                    <div class="title_back"></div>
+		                    <div class="title">
+		                                Landscape
+
+		                    </div>
+		                </div>
+		            </div>
+		            <div data-p="112.50" style="display: none;">
+		                <img data-u="image" src="img/img/celly_project_2.png" />
+		                <div data-u="thumb">
+		                    <img src="img/motor.jpg" />
+		                    <div class="title_back"></div>
+		                    <div class="title">
+		                                Motor
+
+		                    </div>
+		                </div>
+		            </div>
+		            <div data-p="112.50" style="display: none;">
+		                <img data-u="image" src="img/img/celly_project_3.png" />
+		                <div data-u="thumb">
+		                    <img src="img/photography.jpg" />
+		                    <div class="title_back"></div>
+		                    <div class="title">
+		                                Photography
+
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <!-- Thumbnail Navigator -->
+		        <div data-u="thumbnavigator" class="jssort16" style="position:absolute;left:0px;bottom:0px;width:600px;height:100px;" data-autocenter="1">
+		            <!-- Thumbnail Item Skin Begin -->
+		            <div data-u="slides" style="cursor: default;">
+		                <div data-u="prototype" class="p">
+		                    <div data-u="thumbnailtemplate" class="t"></div>
+		                </div>
+		            </div>
+		            <!-- Thumbnail Item Skin End -->
+		        </div>
+		        <!-- Bullet Navigator -->
+		        <div data-u="navigator" class="jssorb03" style="bottom:116px;right:16px;">
+		            <!-- bullet navigator item prototype -->
+		            <div data-u="prototype" style="width:21px;height:21px;">
+		                <div data-u="numbertemplate"></div>
+		            </div>
+		        </div>
+		        <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+		    </div>
+			</div>
+
+			<div class="txt">Celiac small batch messenger bag humblebrag, pickled cardigan bespoke mixtape intelligentsia chicharrones kickstarter williamsburg. Kitsch biodiesel four loko, chambray quinoa mixtape franzen small batch meggings tumblr etsy bushwick farm-to-table art party. Slow-carb humblebrag actually trust fund paleo messenger bag. Forage narwhal tofu meditation wayfarers roof party, quinoa chicharrones kitsch selfies. Cold-pressed occupy tattooed, health goth XOXO ennui dreamcatcher. Tattooed actually butcher mumblecore flannel, cred mustache. Poutine four dollar toast selfies cold-pressed, flexitarian mustache salvia chartreuse.</div>
+			<div class="projfooter columns small-12 text-center">
+				<button class="navcircles"><img class = "buttonimg" src="img/img/sprite_button_1.png"><span class="chevron left"></span></button>
+				<button class="navcircles"><img class = "buttonimg" src="img/img/sprite_button_2.png"></button>
+				<button class="navcircles"><img class = "buttonimg" src="img/img/sprite_button_3.png"></button>
+				<button class="navcircles"><img class = "buttonimg" src="img/img/sprite_button_4.png"></button>
+				<button class="navcircles"><span class="chevron right"></span><img class = "buttonimg" src="img/img/sprite_button_5.png"></button>
+
+			</div>
+		</div>
+		<div class="small-3 columns">
+			<button>about</button>
+			<button>print design</button>
+			<button>web design</button>
+			<button>illustrations</button>
+			<button>game sprites</button>
+			<div class="bio">
+				<img src="img/tumblravatar.png">
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+
+	</div>
+</body>
