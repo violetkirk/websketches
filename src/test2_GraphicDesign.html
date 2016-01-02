@@ -1,0 +1,107 @@
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/foundation.css">
+	<script scr="js/vendor/modernizr.js"> </script>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!--  <script type="text/javascript" src="jquery/jssor.slider.mini.js"></script>-->
+	<script type="text/javascript" src="js/gallery.js"></script>
+	<!--	<script>
+				jQuery(document).ready(function ($) {
+
+						var jssor_1_options = {
+							$AutoPlay: true,
+							$BulletNavigatorOptions: {
+								$Class: $JssorBulletNavigator$
+							},
+							$ThumbnailNavigatorOptions: {
+								$Class: $JssorThumbnailNavigator$,
+								$Cols: 3,
+								$Align: 200
+							}
+						};
+
+						var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+						//responsive code begin
+						//you can remove responsive code if you don't want the slider scales while window resizing
+						function ScaleSlider() {
+								var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+								if (refSize) {
+										refSize = Math.min(refSize, 600);
+										jssor_1_slider.$ScaleWidth(refSize);
+								}
+								else {
+										window.setTimeout(ScaleSlider, 30);
+								}
+						}
+						ScaleSlider();
+						$(window).bind("load", ScaleSlider);
+						$(window).bind("resize", ScaleSlider);
+						$(window).bind("orientationchange", ScaleSlider);
+						//responsive code end
+				});
+		</script> -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+ 		var ids = new Array(0,1,2,3,4);
+ 		FOTO.Slider.importBucketFromIds('default',ids);
+ 		FOTO.Slider.reload('default');
+ 		FOTO.Slider.preloadImages('default');
+ 		FOTO.Slider.enableSlideshow('default');
+ 	});
+ 	</script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="small-9 columns col-nopad">
+
+			<div class="mainimage">
+				<div class="photoslider text-center" id="default"></div>
+					<script type="text/javascript">
+					$(document).ready(function(){
+					    //change the 'baseURL' to reflect the host and or path to your images
+					    FOTO.Slider.baseURL = 'img/img/*.png';
+
+					    //set images by filling our bucket directly
+					    FOTO.Slider.bucket = {
+					        'default': {
+					            0: {'thumb': 'AG_thumb_0.png', 'main': 'AG_0.png', 'caption': 'Opie'},
+					            1: {'AG_thumb_1.png', 'main': 'AG_1.png', 'caption': 'Opie'},
+					            2: {'thumb': 'AG_thumb_2.png', 'main': 'AG_2.png', 'caption': 'Opie'},
+					            3: {'thumb': 'AG_thumb_3.png', 'main': 'AG_3.png', 'caption': 'Opie'}
+											4: {'thumb': 'AG_thumb_4.png', 'main': 'AG_4.png', 'caption': 'Opie'},
+					        }
+					    };
+
+					    //or set our images by the bucket importer
+					    var ids = new Array(0,1,2,3);
+					    FOTO.Slider.importBucketFromIds('default',ids);
+					});
+					</script>
+			</div>
+
+			<div class="txt">Celiac small batch messenger bag humblebrag, pickled cardigan bespoke mixtape intelligentsia chicharrones kickstarter williamsburg. Kitsch biodiesel four loko, chambray quinoa mixtape franzen small batch meggings tumblr etsy bushwick farm-to-table art party. Slow-carb humblebrag actually trust fund paleo messenger bag. Forage narwhal tofu meditation wayfarers roof party, quinoa chicharrones kitsch selfies. Cold-pressed occupy tattooed, health goth XOXO ennui dreamcatcher. Tattooed actually butcher mumblecore flannel, cred mustache. Poutine four dollar toast selfies cold-pressed, flexitarian mustache salvia chartreuse.</div>
+
+		</div>
+		<div class="small-3 columns">
+			<button>about</button>
+			<button>print design</button>
+			<button>web design</button>
+			<button>illustrations</button>
+			<button>game sprites</button>
+			<div class="bio">
+				<!--<img src="img/tumblravatar.png">-->
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+
+	</div>
+</body>

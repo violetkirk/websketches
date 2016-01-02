@@ -11,8 +11,9 @@ button{
 
 }
 .mainimage {
-  height:400px;
+  height:450px;
   background-color: black;
+  text-align: center;
 }
 .bio {
   width: 90%;
@@ -22,6 +23,8 @@ button{
 }
 .txt{
   margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .small-9{
   background-color:white;
@@ -95,11 +98,12 @@ button{
 
 .photoslider_nav {
 	position: relative;
-	border: solid black 1px;
+  //border: solid blue 1px;
 	overflow: hidden;
-	height: 90px;
-	width: 720px;
+	height: 110px;
+	width: 605px;
 	margin: auto;
+  text-align:center;
 }
 
 .photoslider_thumbBar {
@@ -109,17 +113,30 @@ button{
 	display: block;
 	margin: 0px;
 	padding: 0px;
+  text-align: center;
 }
 
 .photoslider_thumb {
 	position: relative;
-	border: solid black 1px;
-	width: 50px;
-	height: 50px;
 	float: left;
-	padding: 5px;
-	margin: 5px;
 	cursor: pointer;
+  background-color: #9ccfcf;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin: 10px;
+  box-shadow:none;
+  padding-bottom: 3px;
+  overflow: hidden;
+  -o-transition:color .3s ease-out, background .3s ease-in;
+  -ms-transition:color .3s ease-out, background .3s ease-in;
+  -moz-transition:color .3s ease-out, background .3s ease-in;
+  -webkit-transition:color .3s ease-out, background .3s ease-in;
+}
+
+//this is still a piece of shit -Violet
+.photoslider_thumb:hover {
+  background-color: #2285a2;
 }
 
 .photoslider_clear {
@@ -128,7 +145,7 @@ button{
 
 .photoslider_main  {
 	position: relative;
-	height: 420px;
+	height: 300px;
 	padding-bottom: 5px;
 }
 
@@ -144,7 +161,7 @@ button{
 	text-align: center;
 }
 
-.photoslider_control {
+/*.photoslider_control {
 	display: none;
 	text-align: center;
 	font-weight: bold;
@@ -175,4 +192,4 @@ button{
 
 .slideshow_disabled {
 	border-bottom: solid #919191 2px;
-}
+}*/

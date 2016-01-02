@@ -30,6 +30,7 @@ FOTO.Slider = {
 	getUrlFromId: function(key,id,isThumb){
 
 		//do we have this url in our bucket?
+		//This is what's causing problems -Violet
 		if(this.bucket[key] != null && this.bucket[key][id] != null){
 			if(isThumb && this.bucket[key][id]['thumb'] != null){
 				return this.baseURL+this.bucket[key][id]['thumb'];
@@ -67,7 +68,8 @@ FOTO.Slider = {
 		}
 
 		var slot = 0;
-
+//it's going wrong here -Violet
+//rewrite for loop? Look up "index of for in loop"
 		for(i in this.bucket[key]){
 			var div = $(document.createElement('div'));
 			div.attr('imageid',i);
@@ -99,8 +101,7 @@ FOTO.Slider = {
 		$(clear).addClass('photoslider_clear');
 
 		//finally we need to force the width of the bar so that the divs don't wrap to the next line
-		// we give it 1 extra slot just for buffer
-		$(bar).css('width',((slot+1)*this.data[key]['thumbWidth'])+'px')
+		// we give it 1 extra slo
 
 
 		$(bar).append(clear);
@@ -113,7 +114,7 @@ FOTO.Slider = {
 			this.data[key] = new Object();
 		}
 
-		this.data[key]['thumbWidth'] = 72;
+		this.data[key]['thumbWidth'] = 120;
 		this.data[key]['paused'] = true;
 		this.data[key]['currentSlot'] = 0;
 		this.data[key]['currentId'] = null;
@@ -259,7 +260,7 @@ FOTO.Slider = {
 		//let's move our thumb into position
 		if(this.data[key]['currentId'] != null){
 			//move the thumbnail back up
-			SKEL.EFFECTS.Slide.animate($('.photoslider_thumb[imageid='+this.data[key]['currentId']+']'),'top','20px','0px',500,SKEL.Transitions.quadOut);
+			// SKEL.EFFECTS.Slide.animate($('.photoslider_thumb[imageid='+this.data[key]['currentId']+']'),'top','20px','0px',500,SKEL.Transitions.quadOut);
 			//NOTE: we don't want to clear this interval incase the user clicks really fast (unless we kept track of every animation)
 		}
 
@@ -270,7 +271,8 @@ FOTO.Slider = {
 		thumb.addClass('photoslider_thumb_active');
 
 		//animate our div down
-		this.data[key]['intervalThumb'] = SKEL.EFFECTS.Slide.animate(thumb,'top','0px','20px',250,SKEL.Transitions.quadOut);
+		//or we could not -Violet
+	//	this.data[key]['intervalThumb'] = SKEL.EFFECTS.Slide.animate(thumb,'top','0px','20px',250,SKEL.Transitions.quadOut);
 
 		//where are we right now?
 		var currentPos = this.findRelativePos(bar.get(0));
@@ -291,7 +293,9 @@ FOTO.Slider = {
 
 		//window.alert('thumb '+thumb+' key'+key+' from '+barFrom+' to '+barTo+ ' navWidth '+navWidth+' thumb '+this.data[key]['thumbWidth']+' slot '+slot+' center'+centerStart);
 
-		this.data[key]['interval'] = SKEL.EFFECTS.Slide.animate(bar,'left',barFrom,barTo,1000,SKEL.Transitions.backOut);
+//commented this bit out. It was the part that animated.
+// -Violet
+//		this.data[key]['interval'] = SKEL.EFFECTS.Slide.animate(bar,'left',barFrom,barTo,1000,SKEL.Transitions.backOut);
 	},
 
 	//preloads the image for the main viewing area
