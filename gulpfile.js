@@ -27,7 +27,7 @@ gulp.task('sass', ['css'], function(){
 
 gulp.task('images', function(){
   gulp.src('src/**/*.png')
-  .pipe(gulp.dest('dist/img'));
+  .pipe(gulp.dest('dist'));
 });
 
 // **** new stuff after here ****

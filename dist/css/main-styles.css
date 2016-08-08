@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Ubuntu; }
+
+h3 {
+  text-align: center;
+  font-weight: 700; }
+
+h4 {
+  font-weight: 500; }
+
+img {
+  padding: 5px; }
+
+p {
+  font-size: 10pt; }
+
+.header1 {
+  background-color: black;
+  color: white;
+  height: 50px;
+  margin: 0;
+  padding: 10px; }
+
+.header2 {
+  background-color: #9FB2B2;
+  margin: 0;
+  padding: 25px;
+  font-family: Ubuntu;
+  height: 130px; }
+
+.darkblue {
+  background-color: #9FB2B2;
+  margin: 0px; }
+
+.lightblue {
+  background-color: #D2E7E7;
+  margin: 0px; }
+
+.content {
+  background-color: white;
+  padding: 15px;
+  font-family: Ubuntu;
+  font-size: 10;
+  margin-top: 10px;
+  border: solid grey; }
+
+.bannerrow {
+  min-height: 50vh;
+  width: 100vw;
+  padding: 20px 10px; }
+
+.smallimg {
+  height: 150px; }
